@@ -201,9 +201,9 @@ export default class App extends Component {
 
                   <span>I'm happy to hear from my readers. Thoughts, feedback, critique - all welcome! Drop me a line:</span>
 
-                        <span className="email">
-                            <a href="#">jimmy@notanactualemail.com</a>, PGP key 0x5AK0BEA1
-                        </span>
+                  <span className="email">
+                      <a href="#">jimmy@notanactualemail.com</a>, PGP key 0x5AK0BEA1
+                  </span>
                 </div>
               </div>
             </div>

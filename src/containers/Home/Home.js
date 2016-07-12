@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-// import { CounterButton, GithubButton } from 'components';
 import { isLoaded as postsLoaded, load as loadPosts } from 'redux/modules/postList';
-// import config from '../../config';
 import Helmet from 'react-helmet';
 import { asyncConnect } from 'redux-async-connect';
 
@@ -29,12 +27,11 @@ export default class Home extends Component {
   };
 
   render() {
-    const styles = require('./Home.scss');
     const { postList } = this.props;
 
     const Post = ({ post }) => (
       <div className="col-md-6 col-sm-6">
-        <article className={styles.blogTeaser}>
+        <article className="blogTeaser">
           <header>
             <img src={post.image} alt="A Cat"/>
             <h3><Link to="/article" query={{id: post._id}} title={post.title}>{post.title}</Link></h3>
