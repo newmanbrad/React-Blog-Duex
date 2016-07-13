@@ -2,7 +2,7 @@
  *  Point of contact for component modules
  *
  */
-
+export AsideWidget from './AsideWidget/AsideWidget';
 export GithubButton from './GithubButton/GithubButton';
 
 // Posts

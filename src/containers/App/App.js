@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+import { AsideWidget } from 'components';
 import { isLoaded as isLayoutLoaded, load as loadLayout } from 'redux/modules/layout';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 import { push } from 'react-router-redux';
@@ -129,31 +130,9 @@ export default class App extends Component {
               </div>
               <div className="col-md-4 blog-aside">
 
-                <div className="aside-widget">
-                  <header>
-                    <h3>Authors Favorites</h3>
-                  </header>
-                  <div className="body">
-                    <ul className="tales-list">
-                      {links.map((link, index) => {
-                        return <li key={index}><a href={link.url} title={link.name} target="_blank">{link.name}</a></li>;
-                      })}
-                    </ul>
-                  </div>
-                </div>
+                <AsideWidget data={links} listClass="tales-list" widgetType="Links" />
 
-                <div className="aside-widget">
-                  <header>
-                    <h3>Tags</h3>
-                  </header>
-                  <div className="body clearfix">
-                    <ul className="tags">
-                      {articleTags.map((tag, index) => {
-                        return <li><Link key={index} to={`/?tagPath=${tag.path}`} className="label">{tag.name}</Link></li>;
-                      })}
-                    </ul>
-                  </div>
-                </div>
+                <AsideWidget data={articleTags} listClass="tags" widgetType="Tags" />
 
               </div>
             </div>
