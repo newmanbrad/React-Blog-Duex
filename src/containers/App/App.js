@@ -149,7 +149,7 @@ export default class App extends Component {
                   <div className="body clearfix">
                     <ul className="tags">
                       {articleTags.map((tag, index) => {
-                        return <li><Link key={index} to="/" query={{tagPath: tag.path}} className="label">{tag.name}</Link></li>;
+                        return <li><Link key={index} to={`/?tagPath=${tag.path}`} className="label">{tag.name}</Link></li>;
                       })}
                     </ul>
                   </div>

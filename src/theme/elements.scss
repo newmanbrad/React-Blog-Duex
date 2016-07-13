@@ -225,7 +225,7 @@
 
 
 /* Blog styles */
-.blog-main, .blog-aside {
+.blog-main .blog-aside {
   position:relative;
   //Vertical seperator (also see below)
   &:before {
@@ -270,7 +270,7 @@
   margin-bottom:100px;
 
   header {
-    //#gradient {@include vertical($widget-gradient-start, $widget-gradient-end);}
+    background-color: $widget-gradient-end;
     border:1px $vertical-separator solid;
 
     h3 {
