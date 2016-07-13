@@ -26,7 +26,7 @@ export default class AsideWidget extends Component {
         <div className="body clearfix">
           <ul className={listClass}>
             {data.map((item, index) => {
-              return <li><Link key={index} to={ this.createToString(item, widgetType) } className="label">{item.name}</Link></li>;
+              return <li key={index}><Link to={ this.createToString(item, widgetType) } className="label">{item.name}</Link></li>;
             })}
           </ul>
         </div>
