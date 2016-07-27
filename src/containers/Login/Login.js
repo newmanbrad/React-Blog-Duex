@@ -23,6 +23,8 @@ export default class Login extends Component {
   render() {
     const {user, logout} = this.props;
     const styles = require('./Login.scss');
+
+    console.log(user);
     return (
       <div className={styles.loginPage + ' container'}>
         <Helmet title="Login"/>
@@ -32,6 +34,9 @@ export default class Login extends Component {
           <form className="login-form form-inline" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <input type="text" ref="username" placeholder="Enter a username" className="form-control"/>
+            </div>
+            <div className="form-group">
+              <input type="password" ref="password" placeholder="" className="form-control"/>
             </div>
             <button className="btn btn-success" onClick={this.handleSubmit}><i className="fa fa-sign-in"/>{' '}Log In
             </button>
